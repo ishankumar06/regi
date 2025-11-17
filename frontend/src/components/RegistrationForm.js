@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import "./RegistrationForm.css";  // Your CSS for styling the form as per design
+import "./RegistrationForm.css";  
 
 export default function RegistrationForm() {
   const {
@@ -12,7 +12,7 @@ export default function RegistrationForm() {
 
   const onSubmit = async (formData) => {
     try {
-      const response = axios.post("https://registrationbackend-ab68.onrender.com", formData);
+      const response = axios.post("https://regiformbackend.onrender.com", formData);
       alert("Registration successful!");
     } catch (error) {
       alert(error.response?.data?.message || "Registration failed");
