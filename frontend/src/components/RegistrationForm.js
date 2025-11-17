@@ -12,7 +12,7 @@ export default function RegistrationForm() {
 
   const onSubmit = async (formData) => {
     try {
-      const response = axios.post("https://regi-25xb.onrender.com", formData);
+      const response = axios.post("https://regi-1-5z5r.onrender.com", formData);
       alert("Registration successful!");
     } catch (error) {
       alert(error.response?.data?.message || "Registration failed");
