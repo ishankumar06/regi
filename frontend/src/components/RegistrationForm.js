@@ -12,7 +12,7 @@ export default function RegistrationForm() {
 
   const onSubmit = async (formData) => {
     try {
-      const response = axios.post("http://localhost:5000/api/auth/register", formData);
+      const response = axios.post("https://registrationbackend-ab68.onrender.com", formData);
       alert("Registration successful!");
     } catch (error) {
       alert(error.response?.data?.message || "Registration failed");
