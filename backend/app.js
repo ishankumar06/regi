@@ -1,4 +1,3 @@
-// ...existing code...
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
@@ -11,15 +10,18 @@ const app = express();
 connectDB();
 
 // Middleware
-const allowed = [process.env.FRONTEND_URL, 'http://localhost:3000'].filter(Boolean);
+
+// Allow all origins - WARNING: suitable for testing only, not recommended for production
 app.use(cors({
-  origin: function(origin, callback) {
-    // allow non-browser (curl, server) requests when origin is undefined
-    if (!origin) return callback(null, true);
-    if (allowed.includes(origin)) return callback(null, true);
-    return callback(new Error('CORS not allowed'));
-  }
+  origin: true // Reflects request origin, allowing any origin
 }));
+
+// For non-browser requests (curl/server), still allow
+// app.use((req, res, next) => {
+//   if (!req.headers.origin) next();
+//   else next();
+// });
+
 app.use(express.json()); // To parse JSON bodies
 
 // Routes
@@ -35,4 +37,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-// ...existing code...
