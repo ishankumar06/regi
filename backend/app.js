@@ -9,18 +9,21 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
+// Set allowed origins
+const allowedOrigins = ['https://registrationform-ish.vercel.app', 'http://localhost:3000'];
+
 // Middleware
-
-// Allow all origins - WARNING: suitable for testing only, not recommended for production
 app.use(cors({
-  origin: true // Reflects request origin, allowing any origin
+  origin: function (origin, callback) {
+    // Allow requests with no origin (curl, server-to-server)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed from this origin'));
+    }
+  }
 }));
-
-// For non-browser requests (curl/server), still allow
-// app.use((req, res, next) => {
-//   if (!req.headers.origin) next();
-//   else next();
-// });
 
 app.use(express.json()); // To parse JSON bodies
 
