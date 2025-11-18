@@ -1,12 +1,15 @@
-import React from 'react';
-import RegistrationForm from './components/RegistrationForm'; 
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegistrationForm from './components/RegistrationForm';
+import RegistrationSuccess from './components/RegistrationSuccess';
 
 function App() {
   return (
-    <div className="App">
-      <RegistrationForm />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<RegistrationForm />} />
+        <Route path="/success/:username" element={<RegistrationSuccess />} />
+      </Routes>
+    </Router>
   );
 }
 

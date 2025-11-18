@@ -1,3 +1,4 @@
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -12,15 +13,17 @@ html, body {
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop') 
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop')
               no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
+  color: #333;
 }
 
+/* Container for registration form */
 .registration-container {
   display: flex;
   width: 900px;
@@ -29,8 +32,10 @@ body {
   border-radius: 18px;
   overflow: hidden;
   min-height: 600px;
+  background: white;
 }
 
+/* Left panel (image + text) */
 .left-panel {
   flex: 1;
   background: rgba(0, 0, 0, 0.5);
@@ -56,6 +61,7 @@ body {
   display: none;
 }
 
+/* Right panel (form) */
 .right-panel {
   flex: 1;
   background: white;
@@ -71,6 +77,7 @@ body {
   color: #333;
 }
 
+/* Form inputs */
 form input {
   display: block;
   width: 100%;
@@ -81,6 +88,7 @@ form input {
   outline: none;
   font-size: 16px;
   background: transparent;
+  color: #333;
 }
 
 form input:focus {
@@ -91,6 +99,7 @@ form input::placeholder {
   color: #999;
 }
 
+/* Error message styling */
 .error {
   color: red;
   margin-top: -12px;
@@ -98,6 +107,7 @@ form input::placeholder {
   font-size: 12px;
 }
 
+/* Terms label */
 .terms {
   font-size: 14px;
   margin-bottom: 15px;
@@ -107,6 +117,7 @@ form input::placeholder {
   color: #333;
 }
 
+/* Submit button */
 .login-btn {
   background: #ff1e56;
   border: none;

@@ -1,0 +1,83 @@
+/* Container */
+.registration-success-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #333;
+  text-align: center;
+}
+
+/* Headings */
+.registration-success-container h2 {
+  color: gray; /* Success green */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.registration-success-container h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.registration-success-container p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* List */
+.registration-success-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.registration-success-container li {
+  background-color: #e9f4ea;
+  margin: 8px 0;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-weight: 500;
+}
+
+.registration-success-container strong {
+  color: black;
+}
+
+/* Button on success page */
+.btn-home {
+  background: gray;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background: gray;
+}
+
+/* Status messages */
+.status-message {
+  font-size: 1.2rem;
+  margin: 30px 0;
+}
+
+.status-message.error {
+  color: #e55353;
+}
